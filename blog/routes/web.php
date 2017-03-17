@@ -13,3 +13,4 @@
 
 Route::get('/','IndexController@regis');
 Route::post('/', 'IndexController@postRegis');
+Route::get('/thanks','IndexController@thanks');

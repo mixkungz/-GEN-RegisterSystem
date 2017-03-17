@@ -7,11 +7,22 @@
     <title>GEN111 Register System</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/6.4.4/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/sweetalert2/6.4.4/sweetalert2.min.js" charset="utf-8"></script>
+    <style media="screen">
+      body{
+        width: 100%;
+        height: 100%;
+        background: #C9CCD3;
+        background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+        background-blend-mode: lighten;
+      }
+    </style>
 
   </head>
   <body>
     <div class="container">
-      <form action="" method="post">
+      <form action="/" method="post">
         {{ csrf_field() }}
         <div class="row">
           <div class="input-field col s6">
@@ -41,7 +52,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <select name="faculty">
+            <select name="faculty" required="">
               <option value="" disabled selected>Choose your faculty</option>
               <option value="engineer">คณะวิศวกรรมศาสตร์</option>
               <option value="science">คณะวิทยาศาสตร์</option>
@@ -69,6 +80,16 @@
       $(document).ready(function() {
        $('select').material_select();
       });
+    </script>
+    <script type="text/javascript">
+      const swal = require('sweetalert2')
+      let onSend = () =>{
+        swal(
+        'Success!',
+        'ส่งข้อมูลเรียบร้อยแล้ว!',
+        'success'
+        )
+      }
     </script>
    </body>
 </html>

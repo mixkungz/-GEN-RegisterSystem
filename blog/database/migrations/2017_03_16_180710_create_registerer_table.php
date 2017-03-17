@@ -15,6 +15,11 @@ class CreateRegistererTable extends Migration
     {
         Schema::create('registerers', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('first_name',30);
+            $table->string('last_name',30);
+            $table->string('std_id',20);
+            $table->string('tel',10);
+            $table->string('faculty');
             $table->timestamps();
         });
     }
