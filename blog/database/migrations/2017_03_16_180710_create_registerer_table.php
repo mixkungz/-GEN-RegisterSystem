@@ -17,7 +17,7 @@ class CreateRegistererTable extends Migration
             $table->increments('id');
             $table->string('first_name',30);
             $table->string('last_name',30);
-            $table->string('std_id',20);
+            $table->string('std_id',11)->unique();
             $table->string('tel',10);
             $table->string('faculty');
             $table->timestamps();

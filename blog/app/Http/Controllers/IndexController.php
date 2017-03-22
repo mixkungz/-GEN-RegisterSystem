@@ -29,7 +29,7 @@ class IndexController extends Controller
           'faculty'=>$req->faculty,
           'created_at'=>new \DateTime(),
         ]);
-        return view('index');
+        return view('thanks');
     }
 
     public function thanks() {
